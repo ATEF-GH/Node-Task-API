@@ -48,7 +48,7 @@ export const updateTask = async (req, res, next) => {
         .json("This is not your task or it does not exist.");
     }
 
-    res.json("Task was updated!");
+    res.json(updateTask.rows[0]);
   } catch (err) {
     next(err);
   }
